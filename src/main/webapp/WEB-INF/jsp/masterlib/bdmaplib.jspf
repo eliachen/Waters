@@ -1,0 +1,57 @@
+
+<!--jq-->
+<script type="text/javascript" src="./resources/lib/jquery/jquery-1.6.2.min.js"></script>
+<!--bd-->
+<script type="text/javascript" src="./resources/BaiduMap/js/bdmap-common.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=79911baf0e80c70c7e77e5654b4a8204"></script>
+<link type="text/css" rel="stylesheet" href="./resources/BaiduMap/css/bdmap-all.css"></link>
+
+<!--ligerUI-->
+<link type="text/css" rel="stylesheet" href="./resources/lib/ligerUI/skins/Aqua/css/ligerui-all.css"></link>
+<link type="text/css" rel="stylesheet" href="./resources/lib/ligerUI/skins/ligerui-icons.css"></link>
+<script type="text/javascript" src="./resources/lib/ligerUI/js/ligerui.min.js"></script>
+ 
+<script type="text/javascript">
+    
+    var cig={
+             bdmap:{container:null,titlecontainer:null,boundary:null},
+             layout:{container:null,opt:null},
+             nav:{container:null}
+         };
+         
+   var bdmap;
+   
+   var Initial=function(){
+       
+           //layout
+           //{ rightWidth: acrdwidth, isRightCollapse: isRightCollapse, height: '100%', space: 1 }
+            $(cig.layout.container).ligerLayout(cig.layout.opt);
+          
+            if(cig.nav.container){
+            //???Accordion??
+            var height = $(".l-layout-center").height();
+            acrd = $(cig.nav.container).ligerAccordion({ height: height - 24 });
+            };
+            
+            // ????API??
+            bdmap = new BMap.Map(cig.bdmap.container, { mapType: BMAP_HYBRID_MAP });
+            //var point = new BMap.Point(116.403765, 39.914850);
+            //bdmap.centerAndZoom(point, 12);
+            bdmap.addControl(new BMap.ScaleControl());                  // ???????
+            bdmap.addControl(new BMap.OverviewMapControl());            //????????
+            bdmap.enableScrollWheelZoom();                              //????????
+            bdmap.addControl(new BMap.MapTypeControl());                //????????
+
+            //????
+            //$("#maptitle").html(cig.bdmap.title);
+            addCtrl(bdmap, cig.bdmap.titlecontainer, BMAP_ANCHOR_TOP_LEFT, new BMap.Size(25, 15));
+            //????
+            getBoundary(bdmap, cig.bdmap.boundary);
+            
+   };
+</script>
+
+<!--<div id="title" style="height:50px;width:500px" >
+    <p id="maptitle"></p>
+</div>-->
+ 

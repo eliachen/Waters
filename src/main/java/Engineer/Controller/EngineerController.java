@@ -33,6 +33,11 @@ public class EngineerController {
       return new ModelAndView("/Engineer/InfDataPumpAndGate");
     };
     
+     @RequestMapping(value = "/InfVideo.do",method = RequestMethod.GET)
+    public ModelAndView InfVideo(){
+      return new ModelAndView("/Engineer/InfVideo");
+    };
+    
     
      @RequestMapping(value = "/InfChartswAndkrQuery.do",method = RequestMethod.GET)
     public ModelAndView InfChartswAndkrQuery(){

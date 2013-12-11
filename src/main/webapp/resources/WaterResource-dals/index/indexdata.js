@@ -19,7 +19,7 @@ exports.data=
     },
      {
           text: " 视频监控", isexpand: "true", children: [
-          { url: "./InfMapRW.do", text: "视频监控中心" }
+          { url: "./InfVideo.do", text: "视频监控中心" }
           //{ url: "/InfPumpStation?id=PumpStation", text: "泵站数据信息一览" }
          ]
      },

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c6db9924-0053-43fa-a28e-1b68cc6aeca0">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="65fbfa8d-9239-4c27-9c9c-84bd66af874c"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="hour" class="java.lang.Integer">
+		<fieldDescription><![CDATA[hour]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="rz" class="java.lang.Integer">
+		<fieldDescription><![CDATA[rz]]></fieldDescription>
+	</field>
+	<field name="stcd" class="java.lang.String">
+		<fieldDescription><![CDATA[stcd]]></fieldDescription>
+	</field>
+	<field name="stnm" class="java.lang.String">
+		<fieldDescription><![CDATA[stnm]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="71" y="43" width="375" height="36" uuid="d89baf03-2b09-43b2-87c1-53d3d42de8e9"/>
+				<text><![CDATA[TEST_TEST_TEST_TEST_TEST_TEST_TEST_TEST_TEST_TEST_TEST_TEST_]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="85" y="35" width="100" height="20" uuid="0617e358-e4cc-4856-8871-4536fcd9dc86"/>
+				<text><![CDATA[小时]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="35" width="71" height="20" uuid="06cfe4ca-a69d-478d-8dcd-59052465300b"/>
+				<text><![CDATA[编号]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="85" y="0" width="100" height="20" uuid="4e35e4bc-b1e4-4f16-9dfb-16ced30bf355"/>
+				<textFieldExpression><![CDATA[$F{hour}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="71" height="20" uuid="c1cde454-50da-49b3-ba26-f0bf6d4d4a52"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

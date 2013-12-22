@@ -61,7 +61,7 @@
                 
             </tr>
             <tr style="height:40%;">
-                <td style="width:30%"><embed class="video" id="v4"  /></td>
+                <td style="width:30%"><embed class="video" id="v4"/></td>
                 <td style="width:30%"><embed class="video" id="v5"/></td>
                 <td style="width:40%"><embed class="video" id="v6"/></td>
             </tr>

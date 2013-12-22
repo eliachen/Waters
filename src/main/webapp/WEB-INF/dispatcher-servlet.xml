@@ -22,8 +22,7 @@
      <context:component-scan base-package="RainAndWater.Controller"></context:component-scan>
      <context:component-scan base-package="Engineer.Controller"></context:component-scan>
      <context:component-scan base-package="Meteorology.Controller"></context:component-scan>
-   
-        <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+     <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
 
     <!--
     Most controllers will use the ControllerClassNameHandlerMapping above, but
@@ -34,7 +33,6 @@
         <property name="mappings">
             <props>
                 <prop key="index.do">indexController</prop>
-                <prop key="hello.do">helloController</prop>
             </props>
         </property>
     </bean>
@@ -52,9 +50,6 @@
       <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
-    
-       <bean name="helloController"
-          class="hello.controller.helloController"/>
     
     </beans>
     

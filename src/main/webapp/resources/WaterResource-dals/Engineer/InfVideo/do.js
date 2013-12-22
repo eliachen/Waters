@@ -2,7 +2,7 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- * InfEngineer/pg
+ * InfEngineer/infVideo
  */
 
 define(function(require,exports){
@@ -14,12 +14,12 @@ define(function(require,exports){
               $(function () {
             
 
-            setVideo({ id: '#v1', src: './resources/WaterResource-modules/videos/demo.m4v', loop: true });
-            setVideo({ id: '#v2', src: './resources/WaterResource-modules/videos/demo.m4v', loop: true });
-            setVideo({ id: '#v3', src: './resources/WaterResource-modules/videos/demo.m4v', loop: true });
-            setVideo({ id: '#v4', src: './resources/WaterResource-modules/videos/demo.m4v', loop: true });
-            setVideo({ id: '#v5', src: './resources/WaterResource-modules/videos/demo.m4v', loop: true });
-            setVideo({ id: '#v6', src: './resources/WaterResource-modules/videos/demo.m4v', loop: true });
+            setVideo({ id: '#v1', src: '@#$', loop: true });
+            setVideo({ id: '#v2', src: '@#$', loop: true });
+            setVideo({ id: '#v3', src: '@#$', loop: true });
+            setVideo({ id: '#v4', src: '@#$', loop: true });
+            setVideo({ id: '#v5', src: '@#$', loop: true });
+            setVideo({ id: '#v6', src: '@#$', loop: true });
 
            
             //布局

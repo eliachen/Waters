@@ -18,8 +18,13 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class EngineerController {
     
+    private String ss="";
+    
+    
     @RequestMapping(value = "/InfMapPumpAndGate.do",method = RequestMethod.GET)
     public ModelAndView InfMapPumpAndGate(){
+        Engineer.Controller.EngineerController ss =new Engineer.Controller.EngineerController();
+        
       return new ModelAndView("/InfMap/InfMapPumpAndGate");
     };
     
@@ -33,9 +38,15 @@ public class EngineerController {
       return new ModelAndView("/Engineer/InfDataPumpAndGate");
     };
     
+    
      @RequestMapping(value = "/InfVideo.do",method = RequestMethod.GET)
     public ModelAndView InfVideo(){
       return new ModelAndView("/Engineer/InfVideo");
+    };
+    
+    @RequestMapping(value = "/InfVideoData.do",method = RequestMethod.GET)
+    public ModelAndView InfVideoData(){
+      return new ModelAndView("") ;
     };
     
     

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="18b2a127-d62a-4447-bf35-ef0a512d4f06">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="6"/>
+	<parameter name="reptitle" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="11" width="434" height="49" uuid="6762f811-aeef-434f-8fc6-af9a90001300"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reptitle}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="455" y="53" width="100" height="20" backcolor="#000000" uuid="21a6718b-65b3-4d48-86e7-b96310e27175"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="4">
+			<line>
+				<reportElement x="0" y="0" width="555" height="3" forecolor="#E0F4FE" backcolor="#E0F4FE" uuid="6db7645f-5503-43d3-a3e1-2997ec32c586"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Immediate"/>
+	</columnHeader>
+	<detail>
+		<band height="143" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="5">
+			<line>
+				<reportElement x="0" y="2" width="555" height="3" forecolor="#E0F4FE" backcolor="#E0F4FE" uuid="188b28bc-8e28-4db0-9e19-a32ee86aaea8"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="5" width="100" height="20" uuid="5248e575-d785-41d2-a1a0-0214e646b215"/>
+				<text><![CDATA[金海迪尔]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="434" y="5" width="80" height="20" uuid="13e69316-be57-4959-960b-f35e78259277"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="5" width="40" height="20" uuid="8b9f7098-bfc6-4033-a09d-9d21959a9aee"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

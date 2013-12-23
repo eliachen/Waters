@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c6db9924-0053-43fa-a28e-1b68cc6aeca0">
-	<property name="ireport.zoom" value="1.5"/>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="18b2a127-d62a-4447-bf35-ef0a512d4f06">
+	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<subDataset name="dataset1" uuid="65fbfa8d-9239-4c27-9c9c-84bd66af874c"/>
+	<parameter name="reptitle" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -26,47 +26,119 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
-			<staticText>
-				<reportElement x="71" y="43" width="375" height="36" uuid="d89baf03-2b09-43b2-87c1-53d3d42de8e9"/>
-				<text><![CDATA[TEST_TEST_TEST_TEST_TEST_TEST_TEST_TEST_TEST_TEST_TEST_TEST_]]></text>
-			</staticText>
+		<band height="73" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="11" width="434" height="49" uuid="6762f811-aeef-434f-8fc6-af9a90001300"/>
+				<textElement>
+					<font size="26" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reptitle}]]></textFieldExpression>
+			</textField>
+			<textField pattern="yyyy/MM/dd">
+				<reportElement x="455" y="53" width="100" height="20" backcolor="#000000" uuid="21a6718b-65b3-4d48-86e7-b96310e27175"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
 		</band>
 	</title>
 	<pageHeader>
-		<band height="35" splitType="Stretch"/>
+		<band height="4">
+			<line>
+				<reportElement x="0" y="0" width="555" height="3" forecolor="#E0F4FE" backcolor="#E0F4FE" uuid="6db7645f-5503-43d3-a3e1-2997ec32c586"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
 	</pageHeader>
 	<columnHeader>
-		<band height="61" splitType="Stretch">
+		<band height="35" splitType="Immediate">
 			<staticText>
-				<reportElement x="85" y="35" width="100" height="20" uuid="0617e358-e4cc-4856-8871-4536fcd9dc86"/>
+				<reportElement mode="Transparent" x="243" y="15" width="100" height="20" backcolor="#00CCCC" uuid="2922cebb-f4bd-4e5a-9400-9a03cd7b5b17"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
 				<text><![CDATA[小时]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="0" y="35" width="71" height="20" uuid="06cfe4ca-a69d-478d-8dcd-59052465300b"/>
-				<text><![CDATA[编号]]></text>
+				<reportElement mode="Transparent" x="355" y="15" width="100" height="20" backcolor="#00CCCC" uuid="1bda8201-de75-4040-a6a6-cf343439d7d8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[水位/m]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="121" y="15" width="100" height="20" backcolor="#00CCCC" uuid="8d2dd654-2b66-4f3d-9c56-3b04ade733e7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[测站号]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="0" y="15" width="100" height="20" backcolor="#00CCCC" uuid="d04b636a-11f9-4dbb-bce2-68ade4f2ca26"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[测站名称]]></text>
 			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="125" splitType="Stretch">
+		<band height="143" splitType="Stretch">
 			<textField>
-				<reportElement x="85" y="0" width="100" height="20" uuid="4e35e4bc-b1e4-4f16-9dfb-16ced30bf355"/>
+				<reportElement mode="Transparent" x="243" y="0" width="100" height="20" backcolor="#00CCCC" uuid="2b4672f9-2015-4648-80c8-b6aca73455ae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$F{hour}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="0" width="71" height="20" uuid="c1cde454-50da-49b3-ba26-f0bf6d4d4a52"/>
-				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+				<reportElement mode="Transparent" x="355" y="0" width="100" height="20" backcolor="#00CCCC" uuid="66c0ae91-81ac-4949-84c4-4bcbcdfbfdee"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="121" y="0" width="100" height="20" backcolor="#00CCCC" uuid="f4dd9d51-2a48-4db2-ab41-f933954afe7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stcd}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="0" y="0" width="100" height="20" backcolor="#00CCCC" uuid="5c578059-0667-487a-a4a1-f20348a86692"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="false" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stnm}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
 	<columnFooter>
-		<band height="45" splitType="Stretch"/>
+		<band height="5">
+			<line>
+				<reportElement x="0" y="2" width="555" height="3" forecolor="#E0F4FE" backcolor="#E0F4FE" uuid="188b28bc-8e28-4db0-9e19-a32ee86aaea8"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+		</band>
 	</columnFooter>
 	<pageFooter>
-		<band height="54" splitType="Stretch"/>
+		<band height="25" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="5" width="100" height="20" uuid="5248e575-d785-41d2-a1a0-0214e646b215"/>
+				<text><![CDATA[金海迪尔]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="434" y="5" width="80" height="20" uuid="13e69316-be57-4959-960b-f35e78259277"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="515" y="5" width="40" height="20" uuid="8b9f7098-bfc6-4033-a09d-9d21959a9aee"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
 	</pageFooter>
-	<summary>
-		<band height="42" splitType="Stretch"/>
-	</summary>
 </jasperReport>

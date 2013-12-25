@@ -6,6 +6,8 @@
 
 package Dal.Reporter.Manager;
 
+import java.util.Map;
+
 /**
  *
  * @author 尔康
@@ -16,6 +18,8 @@ public class RepCig  {
             public String RepPath;
             //标题
             public String title;
+            //参数
+            public Map Pars;
             
             //输出类型
             public outModelChoice outModel;

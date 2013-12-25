@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author 尔康
  */
-public class NetHelper {
+public class SevreletHelper {
     
     //输出Excel
     public static void toExcel(HttpServletResponse response, byte[] dt) {
@@ -49,7 +49,7 @@ public class NetHelper {
             ouputStream.flush();
             ouputStream.close();
         } catch (IOException ex) {
-            Logger.getLogger(NetHelper.class.getName()).log(Level.SEVERE, "输出HttpServletResponse失败", ex);
+            Logger.getLogger(SevreletHelper.class.getName()).log(Level.SEVERE, "输出HttpServletResponse失败", ex);
         }
     }
 }

@@ -1,4 +1,5 @@
 
 <script type="text/javascript" src="./resources/WaterResource-modules/sea.js"></script>
+<script type="text/javascript" src="../resources/WaterResource-modules/sea.js" ></script>
 
     

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
  package Dal.Reporter.Data;
+import Data.Query.rwQuery;
 import java.util.ArrayList;
 import java.util.List;
  import waterRep.Waterlevelforperiodoftime;
@@ -12,9 +13,12 @@ import java.util.List;
  *
  * @author 尔康
  */
-public class Water {
+public class WaterRepDataFactory {
     
-public static List<Waterlevelforperiodoftime> getRep_Waterlevelforperiodoftime(){
+
+    
+ //查询条件   
+public static List<Waterlevelforperiodoftime> getRep_Waterlevelforperiodoftime(List<rwQuery<Object>> rwq){
     //模拟数据
    List<Waterlevelforperiodoftime> demodata =new ArrayList<Waterlevelforperiodoftime>();
    waterRep.Waterlevelforperiodoftime ss=new waterRep.Waterlevelforperiodoftime();
@@ -22,10 +26,9 @@ public static List<Waterlevelforperiodoftime> getRep_Waterlevelforperiodoftime()
    ss.setHour(1);
    ss.setStcd("8802700");
    ss.setStnm("林泽琛");
-   ss.setRz(90);
+   ss.setRz((float) 90.2);
    demodata.add(ss);
    return demodata;
-    
 };
   
 }

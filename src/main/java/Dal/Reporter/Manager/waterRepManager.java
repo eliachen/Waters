@@ -26,10 +26,17 @@ public class waterRepManager<Td>{
     };
     
     public byte[] GetData(){
-        //设置一个标题
-        Map pars=new HashMap();
-        pars.put("reptitle", rwCig.title);
-        RepManagerImp<Td> rep=new  RepManagerImp<Td>(rwCig.RepPath,pars,data);
+        //设置一个标题,默认就一个标题
+        Map rwpars=new HashMap();
+        rwpars.put("reptitle", rwCig.title);
+        
+        
+        //其它的参数
+        if (!(rwCig.Pars == null)){
+            rwpars.putAll(rwCig.Pars);      
+        }
+              
+        RepManagerImp<Td> rep=new  RepManagerImp<Td>(rwCig.RepPath,rwpars,data);
         
         switch(rwCig.outModel){
             case Pdf:
@@ -39,7 +46,6 @@ public class waterRepManager<Td>{
             case html:
                  return rep.gethtml();
         }
-        
         return null;
     }
 }

@@ -14,7 +14,7 @@ exports.data=
      },
     { text: "数据图表", isexpand: "true", children: [
 		{ url: "./InfMapRW.do", text: "雨情信息图表" },
-		{ url: "./InfMapRW.do", text: "水情信息图表" }
+		{ url: "./Water/Rep.do", text: "水情信息报表" }
 	]
     },
      {

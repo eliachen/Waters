@@ -9,8 +9,8 @@
 .l-taskbar-task-active{border-color:#A2A8AF;background-position:0px -60px; }
 
 .l-taskbar-top{ bottom:auto; top:0px; background-color:White; padding-bottom:1px; border-bottom:1px solid #687079;}
-.l-taskbar-top{_position:absolute;_top:expression(eval(document.documentElement.scrollTop));}
 .l-taskbar{_position:absolute;_bottom:auto;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||0)-(parseInt(this.currentStyle.marginBottom,10)||0))); _background-image:url('../images/win/taskbar.gif');}
+.l-taskbar-top{_position:absolute;_top:expression(eval(document.documentElement.scrollTop));}
 /* ------------------
    *   messagebox  *
 * --------------- */

@@ -18,7 +18,7 @@ public class WaterRepDataFactory {
 
     
  //查询条件   
-public static List<Waterlevelforperiodoftime> getRep_Waterlevelforperiodoftime(List<rwQuery<Object>> rwq){
+public static List<Waterlevelforperiodoftime> getRep_Waterlevelforperiodoftime(rwQuery rwq){
     //模拟数据
    List<Waterlevelforperiodoftime> demodata =new ArrayList<Waterlevelforperiodoftime>();
    waterRep.Waterlevelforperiodoftime ss=new waterRep.Waterlevelforperiodoftime();

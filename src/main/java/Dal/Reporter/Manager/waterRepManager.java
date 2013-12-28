@@ -16,36 +16,36 @@ import java.util.Map;
  * @author 尔康
  * @param <Td>
  */
-public class waterRepManager<Td>{
-    private rwRepCig rwCig;
-    private List<Td> data;
-    
-    public waterRepManager(rwRepCig _rwCig,List<Td> _data) {
-        this.rwCig=_rwCig;
-        this.data=_data;
-    };
-    
-    public byte[] GetData(){
-        //设置一个标题,默认就一个标题
-        Map rwpars=new HashMap();
-        rwpars.put("reptitle", rwCig.title);
-        
-        
-        //其它的参数
-        if (!(rwCig.Pars == null)){
-            rwpars.putAll(rwCig.Pars);      
-        }
-              
-        RepManagerImp<Td> rep=new  RepManagerImp<Td>(rwCig.RepPath,rwpars,data);
-        
-        switch(rwCig.outModel){
-            case Pdf:
-               return rep.getpdf();
-            case excel:
-                 return rep.getexcel();
-            case html:
-                 return rep.gethtml();
-        }
-        return null;
-    }
-}
+//public class waterRepManager<Td>{
+//    private rwRepCig rwCig;
+//    private List<Td> data;
+//    
+//    public waterRepManager(rwRepCig _rwCig,List<Td> _data) {
+//        this.rwCig=_rwCig;
+//        this.data=_data;
+//    };
+//    
+//    public byte[] GetData(){
+//        //设置一个标题,默认就一个标题
+//        Map rwpars=new HashMap();
+//        rwpars.put("reptitle", rwCig.getTitle());
+//        
+//        
+//        //其它的参数
+//        if (!(rwCig.getPars() == null)){
+//            rwpars.putAll(rwCig.getPars());      
+//        }
+//              
+//        RepManagerImp<Td> rep=new  RepManagerImp<Td>(rwCig.getRepPath(),rwpars,data);
+//        
+//        switch(rwCig.getOutModel()){
+//            case Pdf:
+//               return rep.getpdf();
+//            case excel:
+//                 return rep.getexcel();
+//            case html:
+//                 return rep.gethtml();
+//        }
+//        return null;
+//    }
+//}

@@ -127,22 +127,40 @@ define(function(require,exports){
                 ]};
                 
                 //$("#Div2").attr("src", "./Water/RepQuery.do?rep=" + JSON2.stringify(test));
-                 $.getJSON("../Water/test.do",{t1:{t1:"32",t2:3},t2:"33"},function(data){
-                     
-                 });
+                var senddata={rwrepmodel:"Waterlevelforperiodoftime",outModel:"Pdf",Pars:{t1:"s1",t2:"s2"},RepPath:"ss",title:"titleval"};
+                //{user:JSON2.stringify({name:"das",education:"dasf"}),s2:JSON2.stringify(senddata),s3:1}
+                
+            $.ajax({
+                type: "POST",
+                url: "../Water/test.do",
+                data: {user:"dada",s2:JSON2.stringify(senddata),s3:1},
+                success: function(response)
+                {
+                   
+                },
+                error: function(e) {
+                    alert('Error: ' + e);
+                }
+            });
+        
+//                $.getJSON("../Water/test.do",{t:JSON2.stringify(senddata)},function(data){
+//                     
+//                 });
                  
-                  LigerUIHelper.ajax({
-                            loading: "正在处理请求.....",
-                            url: "../Water/test.do",
-                            type:"application/json",
-                            data:JSON2.stringify({'t1':"32",'t2':3}),
-                            success: function (data, msg) {
-                               
-                            },
-                            error: function (msg) {
-                                $.ligerDialog.error(msg);
-                            }
-                        });
+                 
+                 
+//                  LigerUIHelper.ajax({
+//                            loading: "正在处理请求.....",
+//                            url: "../Water/test.do",
+//                            type:"application/json",
+//                            data:JSON2.stringify({'t1':"32",'t2':3}),
+//                            success: function (data, msg) {
+//                               
+//                            },
+//                            error: function (msg) {
+//                                $.ligerDialog.error(msg);
+//                            }
+//                        });
             };
 
 

@@ -1,5 +1,30 @@
 
-<script type="text/javascript" src="./resources/WaterResource-modules/sea.js"></script>
-<script type="text/javascript" src="../resources/WaterResource-modules/sea.js" ></script>
 
+<script type="text/javascript" src="/WaterSourceDemo/resources/WaterResource-modules/sea.js" ></script>
+<script type="text/javascript">
+    
+                //?????
+                var strFullPath=window.document.location.href;
+                var strPath=window.document.location.pathname;
+                var pos=strFullPath.indexOf(strPath);
+                var prePath=strFullPath.substring(0,pos);
+                var postPath=strPath.substring(0,strPath.substr(1).indexOf('/')+1);
+                basePath=prePath+postPath;
+                
+                seajs.config({base:basePath+"/resources/WaterResource-modules/",
+                        alias: {
+                            "jquery": "jquery/jquery-1.6.2.min",
+                            "jqmetadata": "jquery-validation/jquery.metadata.js",
+                            "jqvalidate": "jquery-validation/jquery.validate.min.js",
+                            "msg_cn": "jquery-validation/messages_cn.js",
+                            "ligerUI": "ligerUI/js/ligerui.min.js",
+                            "ligerUIcss": "ligerUI/skins/Aqua/css/ligerui-all.css",
+                            "ebdmap": "baiduMap/ebdmap-common.js",
+                            "ebdmapcss": "baiduMap/ebdmap-all.css",
+                            "baiduMapAPI": "http://api.map.baidu.com/getscript?v=2.0&ak=79911baf0e80c70c7e77e5654b4a8204",
+                            "ichart": "charts/ichartjs/ichart.1.2.min.js",
+                            "json2": "json2/json2.js"
+                        }
+                    });
+</script>
     

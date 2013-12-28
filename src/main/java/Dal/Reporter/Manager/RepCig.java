@@ -6,24 +6,32 @@
 
 package Dal.Reporter.Manager;
 
-import java.util.Map;
+import java.util.HashMap;
 
 /**
  *
  * @author 尔康
  * 报表的设置选项
  */
-public class RepCig  {
+public abstract class RepCig  {
             //报表地址
             public String RepPath;
             //标题
             public String title;
             //参数
-            public Map Pars;
-            
-            //输出类型
+            public HashMap Pars;
+             //输出类型
             public outModelChoice outModel;
             
+            
+             public RepCig() {
+
+             }
+            
+           
+
+ 
+
             //输出的数据枚举类型
             public enum outModelChoice{
                 //Pdf
@@ -33,5 +41,5 @@ public class RepCig  {
                 //excel
                 excel
             };
-   
+
 }

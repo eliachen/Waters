@@ -15,9 +15,7 @@ import java.util.Date;
  */
 public class rwQuery<Tq> {
     //测站编号
-    public String stcd;
-    //测站名称
-    public String stnm;
+    public String[] stcds;
     //有关时间的参量
     public Date[] timepars;
     //其它参量

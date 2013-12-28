@@ -1,0 +1,10 @@
+<!-- any content can be specified here e.g.: -->
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" import="java.util.*"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<jsp:element name="title">
+    <jsp:body><%=basePath%></jsp:body>
+</jsp:element>
